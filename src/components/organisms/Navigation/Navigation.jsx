@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { Button } from '@/components/atoms/Button'
 import { useNavigationContext } from '@/context/NavigationContext'
 import { useAudioContext } from '@/context/AudioContext'
@@ -12,11 +13,24 @@ export const Navigation = ({
   const { activeView, navigate } = useNavigationContext()
   const { playSound } = useAudioContext()
 
-  const handleNav = view => {
-    playSound('nav')
-    navigate(view)
-    if (onItemClick) onItemClick()
-  }
+  const handleNav = useCallback(
+    view => {
+      // Don't play sound or navigate if already on this view
+      if (activeView === view) return
+
+      // Play sound with 1300ms delay for all navigation
+      setTimeout(() => {
+        if (view === 'COMMUNICATION') {
+          playSound('comms')
+        } else {
+          playSound('nav')
+        }
+      }, 1300)
+      navigate(view)
+      if (onItemClick) onItemClick()
+    },
+    [activeView, navigate, playSound, onItemClick]
+  )
 
   return (
     <nav

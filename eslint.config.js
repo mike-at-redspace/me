@@ -32,7 +32,10 @@ export default [
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
-        alert: 'readonly'
+        alert: 'readonly',
+        URL: 'readonly',
+        Audio: 'readonly',
+        getComputedStyle: 'readonly'
       },
       parserOptions: {
         ecmaFeatures: {

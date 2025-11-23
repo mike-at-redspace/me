@@ -7,15 +7,15 @@
 
 .header {
   @apply shrink-0 z-20 bg-black/90 backdrop-blur-md flex items-baseline justify-between mb-6;
-  @apply border-b border-[var(--red)] pb-2 pt-4 mr-4;
+  @apply border-b border-(--red) pb-2 pt-4 mr-4;
 }
 
 .title {
-  @apply text-4xl font-bold text-[var(--red)] uppercase;
+  @apply text-4xl font-bold text-(--red) uppercase;
 }
 
 .label {
-  @apply font-mono text-[var(--red)];
+  @apply font-mono text-(--red);
 }
 
 .content {
@@ -31,7 +31,7 @@
 }
 
 .categoryTitle {
-  @apply text-xl text-[var(--blue)] uppercase font-bold pl-4 border-l-4 border-[var(--light-blue)];
+  @apply text-xl text-(--blue) uppercase font-bold pl-4 border-l-4 border-(--light-blue);
 }
 
 .skillGrid {
@@ -43,8 +43,8 @@
 }
 
 .note {
-  @apply flex-1 h-32 bg-[var(--orange)]/20 border-t-4 border-[var(--orange)] p-4;
-  @apply font-mono text-sm text-[var(--orange)];
+  @apply flex-1 min-h-32 bg-(--orange)/20 border-t-4 border-(--orange) p-4;
+  @apply font-mono text-sm text-(--orange);
 }
 
 .update {
@@ -52,9 +52,9 @@
 }
 
 .activity {
-  @apply w-32 bg-[var(--purple)]/20 border-t-4 border-[var(--purple)] flex items-center justify-center;
+  @apply w-32 bg-(--purple)/20 border-t-4 border-(--purple) flex items-center justify-center;
 }
 
 .activityIcon {
-  @apply text-[var(--purple)] animate-pulse;
+  @apply text-(--purple) animate-pulse;
 }

@@ -2,12 +2,15 @@ import { StatCard } from '@/components/molecules/StatCard'
 import { Logo } from '@/components/atoms/Logo'
 import { STATS } from '@/data/stats'
 import { useEffect, useRef, useState } from 'react'
+import { Github } from 'lucide-react'
+import { useKonamiCode } from '@/hooks'
 import avatarImage from '@/assets/avatar.png'
 import styles from './Dashboard.module.css'
 
 export const Dashboard = () => {
   const avatarSectionRef = useRef(null)
   const headerTextRef = useRef(null)
+  const { isActive: isRedAlert } = useKonamiCode()
   const [barHeights] = useState(() =>
     Array.from({ length: 20 }, () => Math.random() * 80 + 20)
   )
@@ -51,9 +54,21 @@ export const Dashboard = () => {
           </a>
         </div>
         <div ref={headerTextRef} className={styles.headerText}>
-          <h1 className={styles.title}>All Systems Nominal</h1>
+          <h1 className={styles.title}>
+            {isRedAlert
+              ? 'Status:  RED ALERT ENGAGED'
+              : 'Status: Systems Nominal'}
+          </h1>
           <h2 className={styles.subtitle}>
-            Crew Member: mike-at-redspace | Rank: Senior Developer
+            <a
+              href='https://github.com/mike-at-redspace'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.githubLink}
+            >
+              mike-at-redspace
+            </a>{' '}
+            <Github size={20} className={styles.githubIcon} />
           </h2>
         </div>
       </div>

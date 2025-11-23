@@ -5,7 +5,7 @@ export const EXPERIENCE = [
     sector: 'Federation Subspace Network',
     dates: '2021 - PRESENT',
     desc: 'Oversaw fleet-grade interface architecture and performance harmonics for deep-space broadcast arrays.',
-    color: 'var(--orange)',
+    color: 'var(--red)',
     highlights: [
       'Standardized LCARS component matrices across 20+ command vessels (Pluto, BET+, Paramount+).',
       'Optimized quantum render pipelines (Redis/WebP), reducing visual latency by 40% and payload mass by 70%.',
@@ -20,7 +20,7 @@ export const EXPERIENCE = [
     sector: 'Carbon Creek Terraforming',
     dates: 'STARDATE 2021',
     desc: 'Led development of modular terraforming blocks, enabling civilian colonists to reconfigure planetary surfaces independently.',
-    color: 'var(--light-blue)',
+    color: 'var(--green)',
     highlights: [
       'Developed a Gutenberg-class block system for rapid planetary site deployment.',
       'Empowered non-science personnel to launch gated content zones without engineering support.'
@@ -32,7 +32,7 @@ export const EXPERIENCE = [
     sector: 'Augustus Nebula Trading Post',
     dates: '2020 - 2021',
     desc: 'Refactored legacy commerce cores into high-velocity quantum delivery stacks for the trade federation.',
-    color: 'var(--red)',
+    color: 'var(--pale-orange)',
     highlights: [
       'Migrated dilithium trading systems to stateless headless architectures (Jamstack) for superior speed.',
       'Visualized multi-path product configurations to simplify complex requisition orders.',
@@ -45,7 +45,7 @@ export const EXPERIENCE = [
     sector: 'Bynar Integration Systems',
     dates: '2018 - 2020',
     desc: 'Engineered synchronized crew-engagement matrices and subspace messaging arrays.',
-    color: 'var(--green)',
+    color: 'var(--tan)',
     highlights: [
       'Constructed real-time subspace chat relays and gamified academy modules to boost crew retention.',
       'Integrated credit-transfer conduits with external planetary treasuries.',
@@ -58,7 +58,7 @@ export const EXPERIENCE = [
     sector: 'Starfleet Academy Admissions',
     dates: 'STARDATE 2018',
     desc: 'Prototyped modular LCARS assessment systems for officer candidate evaluation.',
-    color: 'var(--blue)',
+    color: 'var(--light-blue)',
     highlights: [
       'Forged modular React-based UI panels for cadet screening applications.',
       'Created holographic developer assessment challenges to streamline the recruitment of new officers.'
@@ -70,7 +70,7 @@ export const EXPERIENCE = [
     sector: 'Jupiter Station Medical Informatics',
     dates: '2016 - 2018',
     desc: 'Designed neural-support data lattices for behavioral health and recovery divisions.',
-    color: 'var(--purple)',
+    color: 'var(--blue)',
     highlights: [
       'Assembled patient-flow orchestration engines for long-term care missions.',
       'Generated ministry-grade statistical dossiers to secure Federation funding.',
@@ -83,7 +83,7 @@ export const EXPERIENCE = [
     sector: 'Milestone Fabrication Command',
     dates: '2010 - 2016',
     desc: 'Built operational command software for franchise-scale industrial fleets.',
-    color: 'var(--tan)',
+    color: 'var(--purple)',
     highlights: [
       'Engineered PHP/HTML5 command consoles for fabrication scheduling and KPI telemetry.',
       'Constructed offline-first star-catalog systems for remote operations in deep space.',

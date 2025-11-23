@@ -4,13 +4,13 @@
 }
 
 .label {
-  @apply text-[var(--tan)] uppercase font-bold text-sm;
+  @apply text-(--tan) uppercase font-bold text-sm;
 }
 
 .required {
-  @apply text-[var(--red)] ml-1;
+  @apply text-(--red) ml-1;
 }
 
 .error {
-  @apply text-[var(--red)] text-sm font-mono;
+  @apply text-(--red) text-sm font-mono;
 }
