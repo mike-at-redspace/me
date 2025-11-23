@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+.block {
+  @apply w-full mb-1 flex items-end justify-end p-2 transition-all duration-500;
+  @apply cursor-pointer hover:brightness-125 focus:outline-none relative overflow-hidden;
+}
+
+.text {
+  @apply text-black font-mono text-xs opacity-70 block transform rotate-180;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}

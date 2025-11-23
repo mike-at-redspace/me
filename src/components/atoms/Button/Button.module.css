@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+.button {
+  @apply flex items-center justify-between w-full h-12 mb-1 px-4;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:brightness-125 focus:outline-none relative overflow-hidden;
+  @apply focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
+}
+
+.button.active {
+  @apply brightness-150 translate-x-1;
+}
+
+.button.flash {
+  @apply brightness-200;
+  animation: flash 0.15s ease-out;
+}
+
+@keyframes flash {
+  0% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(2) contrast(1.2);
+  }
+  100% {
+    filter: brightness(1) contrast(1);
+  }
+}
+
+.content {
+  @apply flex items-center gap-3 z-10;
+}
+
+.icon {
+  @apply flex items-center;
+}
+
+.iconSvg {
+  @apply text-black translate-y-[1.5px];
+}
+
+.label {
+  @apply text-black font-bold uppercase tracking-widest text-lg;
+}
+
+.code {
+  @apply text-black/60 font-mono text-sm z-10;
+}
+
+.hoverEffect {
+  @apply absolute inset-0 bg-white/20 translate-x-[-100%];
+  @apply transition-transform duration-700 ease-linear;
+}
+
+.button:hover .hoverEffect {
+  @apply translate-x-[100%];
+}

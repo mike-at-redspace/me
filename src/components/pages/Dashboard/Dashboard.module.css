@@ -1,0 +1,159 @@
+@import 'tailwindcss';
+.dashboard {
+  @apply h-full w-full overflow-y-auto overflow-x-hidden pr-4 pb-4 space-y-8;
+  animation: fadeInSlide 0.5s ease-out;
+  --scroll-color: var(--green);
+}
+
+.header {
+  @apply flex flex-col items-start gap-6 py-2;
+
+  @media (min-width: 768px) {
+    @apply flex-row;
+  }
+}
+
+.avatarSection {
+  @apply flex flex-col items-center shrink-0 w-full;
+  align-self: flex-start;
+
+  @media (min-width: 768px) {
+    @apply w-auto;
+  }
+}
+
+.avatarLink {
+  @apply block h-full w-full;
+  transition: opacity 0.2s ease;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    @apply w-auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.avatarLink:hover {
+  opacity: 0.8;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+  @apply object-contain;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+
+  @media (min-width: 768px) {
+    width: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.headerText {
+  @apply flex flex-col border-l-0 border-t-4 border-[var(--green)] pl-0 pt-6 w-full;
+
+  @media (min-width: 768px) {
+    @apply border-l-4 border-t-0 pl-6 pt-0 w-auto;
+  }
+}
+
+.title {
+  @apply text-6xl font-bold uppercase text-[var(--green)] mb-2 tracking-tighter;
+}
+
+.subtitle {
+  @apply text-2xl text-[var(--red)] uppercase tracking-widest;
+}
+
+.content {
+  @apply space-y-8;
+}
+
+.intro {
+  @apply grid grid-cols-1 gap-6;
+
+  @media (min-width: 768px) {
+    @apply grid-cols-2;
+  }
+}
+
+.introCard {
+  @apply bg-[var(--green)]/10 p-6 border-t-2 border-[var(--green)] relative overflow-hidden;
+}
+
+.introCard:hover .scanComplete {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.scanComplete {
+  @apply absolute top-0 right-0 p-2 text-[var(--green)] text-xs font-mono;
+}
+
+.introText {
+  @apply text-xl leading-relaxed text-[var(--tan)];
+}
+
+.infoCards {
+  @apply grid grid-rows-3 gap-2;
+}
+
+.infoCard {
+  @apply text-black p-4 flex items-center justify-between;
+  @apply hover:brightness-110 transition-all;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.infoCard:first-child {
+  @apply bg-[var(--pale-orange)] w-[90%];
+}
+
+.infoCard:nth-child(2) {
+  @apply bg-[var(--purple)] w-[90%];
+}
+
+.infoCard:nth-child(3) {
+  @apply bg-[var(--light-blue)] w-[95%];
+}
+
+.infoLabel {
+  @apply font-bold text-xl uppercase;
+}
+
+.infoValue {
+  @apply font-mono;
+}
+
+.logo {
+  @apply flex-shrink-0;
+}
+
+.stats {
+  @apply grid grid-cols-2 gap-4 mt-8;
+
+  @media (min-width: 768px) {
+    @apply grid-cols-4;
+  }
+}
+
+.diagnostics {
+  @apply w-full h-48 border border-[var(--green)]/30 relative p-4 pt-6 mt-8 bg-black/50;
+}
+
+.diagnosticsLabel {
+  @apply absolute top-2 left-2 text-xs text-[var(--green)] font-mono;
+}
+
+.bars {
+  @apply flex h-full items-end gap-2;
+}
+
+.bar {
+  @apply bg-[var(--blue)] opacity-50 hover:opacity-100 transition-all duration-300 ease-in-out;
+  width: 5%;
+}

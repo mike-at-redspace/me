@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+.navigation {
+  @apply shrink-0 flex flex-col bg-black;
+}

@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+.statCard {
+  @apply bg-[var(--green)]/10 border-l-2 border-[var(--green)] p-3;
+}
+
+.label {
+  @apply text-[var(--green)] text-xs uppercase font-mono mb-1;
+}
+
+.value {
+  @apply text-2xl font-bold text-[var(--pale-orange)];
+}

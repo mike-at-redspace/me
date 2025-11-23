@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+.timeline {
+  @apply relative space-y-6;
+}
+
+.timeline::before {
+  content: '';
+  @apply absolute inset-0 ml-5 -translate-x-px h-full w-0.5;
+  @apply bg-gradient-to-b from-transparent via-[var(--blue)] to-transparent;
+
+  @media (min-width: 768px) {
+    @apply mx-auto translate-x-0;
+  }
+}

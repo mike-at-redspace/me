@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+.communication {
+  @apply h-full w-full overflow-y-auto overflow-x-hidden pr-4 pb-4 bg-black;
+}
+
+.container {
+  @apply max-w-3xl mx-auto mt-8;
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+.header {
+  @apply flex items-center gap-4 mb-8;
+}
+
+.icon {
+  @apply text-[var(--purple)] animate-pulse;
+}
+
+.title {
+  @apply text-4xl font-bold text-[var(--purple)] uppercase;
+}
+
+.subtitle {
+  @apply text-[var(--pale-orange)] uppercase tracking-widest;
+}
+
+.form {
+  @apply space-y-6;
+}
+
+.formGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.actions {
+  @apply flex justify-end;
+}
+
+.submitButton {
+  @apply bg-[var(--purple)] hover:bg-[var(--green)] text-black font-bold uppercase py-3 px-8;
+  @apply text-xl tracking-widest rounded-r-full transition-colors transform hover:scale-105;
+  @apply active:scale-95 duration-200 focus-visible:outline-2 focus-visible:outline-[var(--purple)] focus-visible:outline-offset-2;
+}
+
+.note {
+  @apply mt-8 p-4 bg-[var(--light-blue)]/10 border-l-4 border-[var(--light-blue)];
+}
+
+.noteLabel {
+  @apply text-[var(--light-blue)] font-bold;
+}
+
+.note p {
+  @apply text-[var(--pale-orange)] text-sm font-mono;
+}

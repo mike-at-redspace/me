@@ -1,0 +1,49 @@
+---
+import AppWrapper from '../AppWrapper.jsx';
+import '../styles/globals.css';
+const { 
+  title = "Mike Vardy | Senior Frontend Engineer", 
+  description = "Senior Frontend Engineer & Interface Architect. Specializing in React, Design Systems, and Starship-grade UI." 
+} = Astro.props;
+
+const image = new URL(import.meta.env.BASE_URL + "/img/og-image.jpg", Astro.site || Astro.url);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href={import.meta.env.BASE_URL + "/img/favicon.svg"} />
+    <link rel="icon" type="image/png" sizes="96x96" href={import.meta.env.BASE_URL + "/img/favicon-96x96.png"} />
+    <link rel="icon" type="image/x-icon" href={import.meta.env.BASE_URL + "/img/favicon.ico"} />
+    <link rel="apple-touch-icon" sizes="180x180" href={import.meta.env.BASE_URL + "/img/apple-touch-icon.png"} />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href={import.meta.env.BASE_URL + "/site.webmanifest"} />
+    <meta name="theme-color" content="#0094ff" />
+  </head>
+  <body>
+    <div id="root">
+      <AppWrapper client:only="react" />
+    </div>
+  </body>
+</html>
+

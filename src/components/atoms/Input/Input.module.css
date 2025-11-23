@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+.input {
+  @apply w-full bg-[var(--tan)]/10 border-l-4 border-[var(--tan)] p-3;
+  @apply text-[var(--pale-orange)] font-mono;
+  @apply focus:outline-none focus:bg-[var(--tan)]/20;
+  @apply focus-visible:outline-none;
+}
+
+.input:invalid {
+  @apply outline-none;
+  box-shadow: none;
+}
+
+.input.error {
+  @apply border-[var(--red)];
+}

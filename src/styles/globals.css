@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=VT323&display=swap');
+@import 'tailwindcss';
+@import './tokens.css';
+
+@layer base {
+  body {
+    background: linear-gradient(
+      100deg,
+      var(--light-blue) 13.57%,
+      var(--purple) 98.38%
+    );
+    color: var(--black);
+    font-family: 'Antonio', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .font-lcars-header {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .font-lcars-terminal {
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .font-lcars-label {
+    font-family: 'Antonio', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.animate-scan {
+  animation: scanline 2s linear infinite;
+}
+
+.lcars-elbow-top-left {
+  border-top-left-radius: 2rem;
+}
+
+.lcars-elbow-bottom-left {
+  border-bottom-left-radius: 2rem;
+}
+
+.lcars-curve-right {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+}
+
+.animate-fill {
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+.blink {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1.4s step-start infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-color);
+  border-radius: 6px;
+  border: 3px solid var(--black);
+}
+
+/* Remove browser default validation styling */
+input:invalid,
+textarea:invalid {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+@media (min-width: 1920px) {
+  .pens {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

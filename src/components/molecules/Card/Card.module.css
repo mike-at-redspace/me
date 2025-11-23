@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+.card {
+  @apply bg-zinc-900 border-2 p-0 overflow-hidden transition-colors;
+}
+
+.header {
+  @apply p-2;
+}
+
+.title {
+  @apply font-bold uppercase text-lg;
+}
+
+.content {
+  @apply p-6;
+}
+
+.footer {
+  @apply p-4 border-t border-zinc-700;
+}

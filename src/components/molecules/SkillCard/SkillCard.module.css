@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+.skillCard {
+  @apply bg-[var(--pale-orange)]/5 p-4 border border-[var(--light-blue)]/30 relative;
+}
+
+.header {
+  @apply flex justify-between mb-2 text-sm uppercase font-mono text-[var(--light-blue)];
+}
+
+.name {
+  @apply flex-1;
+}
+
+.level {
+  @apply ml-2;
+}
+
+.badgeContainer {
+  @apply absolute top-2 right-2;
+}

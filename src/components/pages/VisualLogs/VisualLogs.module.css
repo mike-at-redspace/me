@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+.visualLogs {
+  @apply h-full w-full flex flex-col;
+  --scroll-color: var(--blue);
+}
+
+.header {
+  @apply shrink-0 z-20 bg-black/90 backdrop-blur-md flex items-baseline justify-between mb-6;
+  @apply border-b border-[var(--blue)] pb-2 pt-4 mr-4;
+}
+
+.title {
+  @apply text-4xl font-bold text-[var(--blue)] uppercase;
+}
+
+.label {
+  @apply font-mono text-[var(--blue)];
+}
+
+.content {
+  @apply flex-1 overflow-y-auto overflow-x-hidden pr-4 pb-4;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+@media (min-width: 1920px) {
+  .grid {
+    @apply grid-cols-6;
+  }
+}
+
+.viewer {
+  @apply h-full w-full flex flex-col;
+  animation: zoomIn 0.3s ease-out;
+}
+
+.viewerHeader {
+  @apply flex justify-between items-center mb-4 bg-[var(--blue)] text-black p-2 rounded-t-lg;
+  @apply sticky top-0 z-20 shrink-0;
+}
+
+.viewerTitle {
+  @apply flex items-center gap-4;
+}
+
+.viewerLabel {
+  @apply font-bold text-xl uppercase tracking-widest px-4;
+}
+
+.viewerId {
+  @apply font-mono text-sm opacity-70;
+}
+
+.closeButton {
+  @apply p-1 hover:bg-black/20 rounded flex items-center gap-2 font-bold uppercase text-sm;
+  @apply focus-visible:outline-2 focus-visible:outline-black focus-visible:outline-offset-2;
+}
+
+.viewerContent {
+  @apply flex-1 flex flex-col border-4 border-[var(--blue)] bg-black overflow-hidden relative min-h-0;
+}
+
+.iframe {
+  @apply absolute inset-0 w-full h-full;
+  border: none;
+  min-height: calc(100vh - 320px);
+}

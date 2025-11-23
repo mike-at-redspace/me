@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+.projectCard {
+  @apply relative bg-zinc-900 border-2 p-0 overflow-hidden transition-colors;
+}
+
+.header {
+  @apply p-2 flex justify-between items-center transition-colors;
+}
+
+.headerTitle {
+  @apply text-black font-bold uppercase;
+}
+
+.headerDots {
+  @apply flex gap-1;
+}
+
+.dot {
+  @apply w-3 h-3 rounded-full bg-black/50;
+}
+
+.content {
+  @apply p-6 relative;
+}
+
+.description {
+  @apply text-[var(--pale-orange)] mb-4 font-mono text-sm leading-6;
+}
+
+.tags {
+  @apply flex flex-wrap gap-2 mb-6;
+}
+
+.tag {
+  @apply text-xs bg-[var(--tan)]/20 text-[var(--light-blue)] px-2 py-1 uppercase tracking-wider;
+  @apply flex items-center gap-1.5 whitespace-nowrap;
+}
+
+.tagIcon {
+  @apply flex-shrink-0;
+  color: var(--light-blue);
+}
+
+.footer {
+  @apply flex justify-between items-end mt-4;
+}
+
+.status {
+  @apply text-xs font-mono px-2 py-1;
+}
+
+.statusOnline {
+  @apply text-green-300 bg-green-900;
+}
+
+.statusOffline {
+  @apply text-red-300 bg-red-900;
+}
+
+.statusArchived {
+  @apply text-gray-300 bg-gray-700;
+}
+
+.link {
+  @apply relative flex items-center gap-2 uppercase font-bold text-sm tracking-widest;
+  @apply text-[var(--red)] transition-all duration-300 ease-in-out;
+  @apply hover:text-white hover:brightness-125;
+  @apply focus:outline-none overflow-hidden;
+}
+
+.linkContent {
+  @apply flex items-center gap-2 z-10 relative;
+  @apply transition-all duration-300 ease-in-out;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.link:hover .linkContent:not(.scrambling):not(.granted) {
+  transform: translateX(0.125rem);
+}
+
+.linkContent.scrambling {
+  @apply font-mono;
+  letter-spacing: 0.1em;
+  animation: glitch 0.1s infinite;
+}
+
+.linkContent.granted {
+  @apply text-green-400;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scanEffect {
+  @apply absolute inset-0 bg-white/20 translate-x-[-100%];
+  @apply transition-transform duration-700 ease-linear;
+}
+
+.link:hover .scanEffect {
+  transform: translateX(100%);
+}

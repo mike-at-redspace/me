@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+.techSpecs {
+  @apply h-full w-full flex flex-col;
+  animation: fadeInSlide 0.5s ease-out;
+  --scroll-color: var(--red);
+}
+
+.header {
+  @apply shrink-0 z-20 bg-black/90 backdrop-blur-md flex items-baseline justify-between mb-6;
+  @apply border-b border-[var(--red)] pb-2 pt-4 mr-4;
+}
+
+.title {
+  @apply text-4xl font-bold text-[var(--red)] uppercase;
+}
+
+.label {
+  @apply font-mono text-[var(--red)];
+}
+
+.content {
+  @apply flex-1 overflow-y-auto overflow-x-hidden pr-4 pb-4;
+}
+
+.skills {
+  @apply grid grid-cols-1 gap-8;
+}
+
+.category {
+  @apply space-y-4;
+}
+
+.categoryTitle {
+  @apply text-xl text-[var(--blue)] uppercase font-bold pl-4 border-l-4 border-[var(--light-blue)];
+}
+
+.skillGrid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.footer {
+  @apply mt-12 flex gap-4;
+}
+
+.note {
+  @apply flex-1 h-32 bg-[var(--orange)]/20 border-t-4 border-[var(--orange)] p-4;
+  @apply font-mono text-sm text-[var(--orange)];
+}
+
+.update {
+  @apply mt-2;
+}
+
+.activity {
+  @apply w-32 bg-[var(--purple)]/20 border-t-4 border-[var(--purple)] flex items-center justify-center;
+}
+
+.activityIcon {
+  @apply text-[var(--purple)] animate-pulse;
+}

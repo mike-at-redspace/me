@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+.textarea {
+  @apply w-full bg-[var(--green)]/10 border-l-4 border-[var(--green)] p-3;
+  @apply text-[var(--pale-orange)] font-mono resize-none;
+  @apply focus:outline-none focus:bg-[var(--green)]/20;
+  @apply focus-visible:outline-none;
+}
+
+.textarea:invalid {
+  @apply outline-none;
+  box-shadow: none;
+}
+
+.textarea.error {
+  @apply border-[var(--red)];
+}

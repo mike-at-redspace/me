@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+.header {
+  @apply h-16 bg-[var(--light-blue)] flex items-center justify-between px-4 mb-2;
+  border-top-left-radius: 2rem;
+}
+
+.left {
+  @apply flex items-center gap-3;
+}
+
+.menuButton {
+  @apply text-black hover:opacity-70 focus-visible:outline-2 focus-visible:outline-black focus-visible:outline-offset-2;
+
+  @media (min-width: 768px) {
+    @apply hidden;
+  }
+}
+
+.right {
+  @apply flex items-center gap-4;
+}
+
+.stardate {
+  @apply text-black font-mono text-base hidden;
+
+  @media (min-width: 640px) {
+    @apply inline;
+  }
+}
+
+.audioButton {
+  @apply text-black hover:opacity-70 transition-opacity focus-visible:outline-2 focus-visible:outline-black focus-visible:outline-offset-2;
+}

@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+.card {
+  @apply cursor-pointer bg-zinc-900 border border-[var(--light-blue)] hover:border-[var(--green)] transition-all duration-300 hover:scale-[1.02];
+  @apply focus-visible:outline-2 focus-visible:outline-[var(--green)] focus-visible:outline-offset-2;
+}
+
+.imageContainer {
+  @apply h-40 relative overflow-hidden flex items-center justify-center border-b border-[var(--blue)];
+}
+
+.image {
+  @apply w-full h-full object-cover opacity-80 transition-opacity;
+}
+
+.card:hover .image {
+  @apply opacity-100;
+}
+
+.imageOverlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60;
+}
+
+.expandIcon {
+  @apply absolute bottom-2 right-2 text-[var(--green)] opacity-0 transition-opacity bg-black/50 p-1 rounded;
+}
+
+.card:hover .expandIcon {
+  @apply opacity-100;
+}
+
+.footer {
+  @apply p-3 bg-[var(--blue)] transition-colors;
+}
+
+.card:hover .footer {
+  background-color: var(--green);
+}
+
+.title {
+  @apply text-white/80 brightness-125 font-bold uppercase text-sm tracking-wider truncate;
+}
+
+.meta {
+  @apply flex justify-between items-center mt-1;
+}
+
+.id {
+  @apply text-black/60 font-mono text-xs;
+}
+
+.divider {
+  @apply h-1 w-12 bg-black/20;
+}

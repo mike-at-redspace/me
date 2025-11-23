@@ -1,0 +1,31 @@
+@theme {
+  --color-orange: oklch(0.73 0.18 60);
+  --color-pale-orange: oklch(0.82 0.14 65);
+  --color-purple: oklch(0.75 0.09 326.46);
+  --color-red: oklch(0.63 0.13 21.97);
+  --color-blue: oklch(0.62 0.16 265);
+  --color-light-blue: oklch(0.75 0.14 265);
+  --color-tan: oklch(0.75 0.08 75);
+  --color-gray: oklch(0.45 0.02 280);
+  --color-black: oklch(0.12 0.02 280);
+  --color-green: oklab(0.81 -0.17 0.07);
+
+  --font-family-sans: 'Antonio', sans-serif;
+  --font-family-mono: 'Share Tech Mono', monospace;
+  --font-family-lcars-header: 'Orbitron', sans-serif;
+  --font-family-lcars-terminal: 'VT323', monospace;
+}
+
+:root {
+  --orange: oklch(0.73 0.18 60);
+  --pale-orange: oklch(0.82 0.14 65);
+  --purple: oklch(0.75 0.09 326.46);
+  --red: oklch(0.63 0.13 21.97);
+  --blue: oklch(0.62 0.16 265);
+  --light-blue: oklch(0.75 0.14 265);
+  --tan: oklch(0.75 0.08 75);
+  --gray: oklch(0.45 0.02 280);
+  --black: oklch(0.12 0.02 280);
+  --green: oklab(0.81 -0.17 0.07);
+  --scroll-color: var(--blue);
+}

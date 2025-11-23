@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+.badge {
+  @apply px-2 py-1 text-xs font-bold uppercase rounded text-black;
+}
+
+.default {
+  /* Default variant styles */
+}
