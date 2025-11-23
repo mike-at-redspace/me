@@ -108,7 +108,19 @@ Located in `src/tokens/`: Colors, Spacing, Typography
 
 ## 📄 Credits
 
-- **Simple Icons** — Brand icons for project tags ([simple-icons.org](https://simpleicons.org/))
+### Dependencies
+
+- **React** — UI library ([react.dev](https://react.dev/))
+- **React DOM** — React renderer ([react.dev](https://react.dev/))
+- **Lucide React** — Icon components ([lucide.dev](https://lucide.dev/))
+- **Simple Icons** — Brand icons for project tags ([simpleicons.org](https://simpleicons.org/))
+
+### Development Dependencies
+
+- **Astro** — Build system with SSR ([astro.build](https://astro.build/))
+- **Tailwind CSS** — Utility-first CSS framework ([tailwindcss.com](https://tailwindcss.com/))
+- **ESLint** — JavaScript linter ([eslint.org](https://eslint.org/))
+- **Prettier** — Code formatter ([prettier.io](https://prettier.io/))
 
 ## 📄 License
 
