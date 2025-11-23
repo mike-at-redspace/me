@@ -19,7 +19,7 @@ import styles from './App.module.css'
 const NAVIGATION_ITEMS = [
   {
     view: 'DASHBOARD',
-    label: 'Profile',
+    label: 'Personnel',
     code: '02-231',
     color: 'var(--green)',
     icon: User

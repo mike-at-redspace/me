@@ -55,7 +55,9 @@ export const Dashboard = () => {
         </div>
         <div ref={headerTextRef} className={styles.headerText}>
           <h1 className={styles.title}>
-            {isRedAlert ? 'Status:  RED ALERT ENGAGED' : 'Status: Systems Nominal'}
+            {isRedAlert
+              ? 'Status:  RED ALERT ENGAGED'
+              : 'Status: Systems Nominal'}
           </h1>
           <h2 className={styles.subtitle}>
             <a
@@ -65,8 +67,7 @@ export const Dashboard = () => {
               className={styles.githubLink}
             >
               mike-at-redspace
-            </a>
-            {' '}
+            </a>{' '}
             <Github size={20} className={styles.githubIcon} />
           </h2>
         </div>

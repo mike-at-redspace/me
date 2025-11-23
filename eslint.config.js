@@ -34,7 +34,8 @@ export default [
         clearInterval: 'readonly',
         alert: 'readonly',
         URL: 'readonly',
-        Audio: 'readonly'
+        Audio: 'readonly',
+        getComputedStyle: 'readonly'
       },
       parserOptions: {
         ecmaFeatures: {

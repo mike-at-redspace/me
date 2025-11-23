@@ -96,25 +96,31 @@ export const useKonamiCode = onActivate => {
 
     const root = document.documentElement
 
-    if (isActive) {
-      // Store original values if not already stored
-      if (!originalColorsRef.current.green) {
-        originalColorsRef.current.green = getComputedStyle(root).getPropertyValue(
-          '--green'
-        ).trim()
-        originalColorsRef.current.red = getComputedStyle(root).getPropertyValue(
-          '--red'
-        ).trim()
-      }
+    // Store original values if not already stored and we're activating
+    if (isActive && !originalColorsRef.current.green) {
+      originalColorsRef.current.green = getComputedStyle(root)
+        .getPropertyValue('--green')
+        .trim()
+      originalColorsRef.current.red = getComputedStyle(root)
+        .getPropertyValue('--red')
+        .trim()
+    }
 
+    // Capture values at the start for cleanup (before any mutations)
+    const greenValue = originalColorsRef.current.green
+    const redValue = originalColorsRef.current.red
+
+    if (isActive) {
       // Swap the variables
-      root.style.setProperty('--green', originalColorsRef.current.red)
-      root.style.setProperty('--red', originalColorsRef.current.green)
+      if (greenValue && redValue) {
+        root.style.setProperty('--green', redValue)
+        root.style.setProperty('--red', greenValue)
+      }
     } else {
       // Restore original values
-      if (originalColorsRef.current.green) {
-        root.style.setProperty('--green', originalColorsRef.current.green)
-        root.style.setProperty('--red', originalColorsRef.current.red)
+      if (greenValue && redValue) {
+        root.style.setProperty('--green', greenValue)
+        root.style.setProperty('--red', redValue)
       } else {
         // Fallback: remove inline styles to restore from CSS
         root.style.removeProperty('--green')
@@ -122,11 +128,11 @@ export const useKonamiCode = onActivate => {
       }
     }
 
-    // Cleanup function to restore original values on unmount
+    // Cleanup function to restore original values
     return () => {
-      if (originalColorsRef.current.green) {
-        root.style.setProperty('--green', originalColorsRef.current.green)
-        root.style.setProperty('--red', originalColorsRef.current.red)
+      if (greenValue && redValue) {
+        root.style.setProperty('--green', greenValue)
+        root.style.setProperty('--red', redValue)
       } else {
         root.style.removeProperty('--green')
         root.style.removeProperty('--red')
