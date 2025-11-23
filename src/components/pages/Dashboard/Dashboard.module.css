@@ -70,6 +70,14 @@
   @apply text-2xl text-[var(--red)] uppercase tracking-widest;
 }
 
+.githubLink {
+  @apply inline-flex items-center gap-2 text-[var(--red)] hover:text-[var(--green)] transition-colors;
+}
+
+.githubIcon {
+  @apply inline-block;
+}
+
 .content {
   @apply space-y-8;
 }

@@ -1,72 +1,125 @@
+// Sound file mappings
+const SOUND_MAP = {
+  nav: 'open.mp3',
+  select: 'close.mp3',
+  'red-alert': 'red-alert.mp3',
+  'mem-150': 'device_1.mp3',
+  'sys-opt': 'device_2.mp3',
+  'data-7': 'device_3.mp3',
+  comms: 'comms.mp3'
+}
+
+// Audio cache to preload and reuse Audio objects
+const audioCache = new Map()
+
+// Track currently playing sounds to prevent duplicates
+const playingSounds = new Set()
+
+// Base path for sounds (Astro serves /public/ at root)
+// Detect base path from current location or default to /me
+const getBasePath = () => {
+  if (typeof window !== 'undefined') {
+    // Try to get base from <base> tag or use current path
+    const baseTag = document.querySelector('base')
+    if (baseTag?.href) {
+      try {
+        const baseUrl = new URL(baseTag.href)
+        return baseUrl.pathname.replace(/\/$/, '') + '/sounds/'
+      } catch {
+        // Fall through to default
+      }
+    }
+    // Fallback: detect from current pathname
+    const pathParts = window.location.pathname.split('/')
+    if (pathParts[1] && pathParts[1] !== '') {
+      return `/${pathParts[1]}/sounds/`
+    }
+  }
+  return '/me/sounds/'
+}
+
+const SOUNDS_BASE_PATH = getBasePath()
+
+/**
+ * Get or create an Audio object for the given sound type
+ */
+const getAudio = type => {
+  const filename = SOUND_MAP[type]
+  if (!filename) {
+    console.warn(`Unknown sound type: ${type}`)
+    return null
+  }
+
+  // Return cached audio if available
+  if (audioCache.has(type)) {
+    return audioCache.get(type)
+  }
+
+  // Create new audio object
+  const audio = new Audio(`${SOUNDS_BASE_PATH}${filename}`)
+  audio.preload = 'auto'
+
+  // Handle errors gracefully
+  audio.addEventListener('error', e => {
+    console.warn(`Failed to load sound: ${type} (${filename})`, e)
+  })
+
+  // Cache the audio object
+  audioCache.set(type, audio)
+
+  return audio
+}
+
+/**
+ * Play a sound by type
+ * @param {string} type - Sound type (nav, select, red-alert, etc.)
+ * @param {boolean} enabled - Whether audio is enabled
+ */
 export const playSound = (type = 'nav', enabled = true) => {
   if (!enabled) return
 
-  const AudioContext = window.AudioContext || window.webkitAudioContext
-  if (!AudioContext) return
+  const audio = getAudio(type)
+  if (!audio) return
 
-  const ctx = new AudioContext()
+  // Prevent duplicate plays of the same sound type within 100ms
+  if (playingSounds.has(type)) {
+    return
+  }
 
-  const makeTone = (freq, duration, startFreq = null) => {
-    const osc1 = ctx.createOscillator()
-    const osc2 = ctx.createOscillator()
-    const gain = ctx.createGain()
+  try {
+    // Clone the audio to allow overlapping playback (especially for red-alert)
+    const audioClone = audio.cloneNode()
+    audioClone.volume = 1.0
 
-    osc1.type = 'sine'
-    osc2.type = 'triangle'
+    // Mark as playing
+    playingSounds.add(type)
 
-    osc2.detune.value = 8
-
-    osc1.connect(gain)
-    osc2.connect(gain)
-    gain.connect(ctx.destination)
-
-    const now = ctx.currentTime
-    const f0 = startFreq ?? freq
-
-    osc1.frequency.setValueAtTime(f0, now)
-    osc2.frequency.setValueAtTime(f0 * 1.01, now)
-
-    osc1.frequency.exponentialRampToValueAtTime(freq, now + duration * 0.5)
-    osc2.frequency.exponentialRampToValueAtTime(
-      freq * 1.01,
-      now + duration * 0.5
+    // Remove from playing set when done
+    audioClone.addEventListener(
+      'ended',
+      () => {
+        playingSounds.delete(type)
+      },
+      { once: true }
     )
 
-    gain.gain.setValueAtTime(0.0001, now)
-    gain.gain.exponentialRampToValueAtTime(0.08, now + 0.01)
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration)
+    audioClone.addEventListener(
+      'error',
+      () => {
+        playingSounds.delete(type)
+      },
+      { once: true }
+    )
 
-    osc1.start(now)
-    osc2.start(now)
-    osc1.stop(now + duration)
-    osc2.stop(now + duration)
-  }
-
-  if (type === 'nav') {
-    makeTone(1800, 0.12, 1200)
-  }
-
-  if (type === 'select') {
-    makeTone(900, 0.18, 600)
-  }
-
-  if (type === 'alert') {
-    makeTone(300, 0.35, 500)
-    setTimeout(() => makeTone(260, 0.35, 400), 120)
-  }
-
-  if (type === 'mem-150') {
-    // Higher pitch, shorter duration (memory access sound)
-    makeTone(2200, 0.1, 1500)
-  }
-
-  if (type === 'sys-opt') {
-    // Medium pitch, medium duration (system operation sound)
-    makeTone(1400, 0.15, 1000)
-  }
-
-  if (type === 'data-7') {
-    // Lower pitch, longer duration (data access sound)
-    makeTone(800, 0.2, 600)
+    audioClone.play().catch(error => {
+      // Handle autoplay restrictions gracefully
+      playingSounds.delete(type)
+      if (error.name !== 'NotAllowedError') {
+        console.warn(`Failed to play sound: ${type}`, error)
+      }
+    })
+  } catch (error) {
+    playingSounds.delete(type)
+    console.warn(`Error playing sound: ${type}`, error)
   }
 }

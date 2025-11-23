@@ -13,6 +13,7 @@ import {
 } from '@/components/pages'
 import { TransitionScreen } from '@/components/molecules'
 import { useNavigationContext } from '@/context/NavigationContext'
+import { useKonamiCode } from '@/hooks'
 import styles from './App.module.css'
 
 const NAVIGATION_ITEMS = [
@@ -63,6 +64,7 @@ const NAVIGATION_ITEMS = [
 const App = () => {
   const { activeView, isTransitioning } = useNavigationContext()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { isActive: isRedAlert } = useKonamiCode()
 
   const handleMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -88,7 +90,7 @@ const App = () => {
   }
 
   return (
-    <div className={styles.app}>
+    <div className={`${styles.app} ${isRedAlert ? styles.redAlert : ''}`}>
       <div className={styles.topBar}>
         <div className={styles.topLeft}>
           <Header
