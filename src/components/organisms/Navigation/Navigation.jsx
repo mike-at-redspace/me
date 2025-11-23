@@ -31,6 +31,7 @@ export const Navigation = ({
           code={item.code}
           color={item.color}
           icon={item.icon}
+          iconData={item.iconData}
           active={activeView === item.view}
           onClick={() => handleNav(item.view)}
         />

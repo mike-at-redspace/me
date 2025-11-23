@@ -20,7 +20,7 @@ export const EXPERIENCE = [
     sector: 'Carbon Creek Terraforming',
     dates: 'STARDATE 2021',
     desc: 'Led development of modular terraforming blocks, enabling civilian colonists to reconfigure planetary surfaces independently.',
-    color: 'var(--teal)',
+    color: 'var(--light-blue)',
     highlights: [
       'Developed a Gutenberg-class block system for rapid planetary site deployment.',
       'Empowered non-science personnel to launch gated content zones without engineering support.'

@@ -1,12 +1,6 @@
 import { useState } from 'react'
-import {
-  Terminal,
-  BarChart2,
-  Briefcase,
-  Database,
-  Code,
-  Mail
-} from 'lucide-react'
+import { User, FileText, FolderOpen, Cpu, Radio } from 'lucide-react'
+import { getIcon } from '@/utils'
 import { Header } from '@/components/organisms/Header'
 import { Sidebar } from '@/components/organisms/Sidebar'
 import {
@@ -27,42 +21,42 @@ const NAVIGATION_ITEMS = [
     label: 'Profile',
     code: '02-231',
     color: 'var(--green)',
-    icon: Terminal
+    icon: User
   },
   {
     view: 'SERVICE_RECORD',
     label: 'Command Logs',
     code: '12-409',
     color: 'var(--pale-orange)',
-    icon: Briefcase
+    icon: FileText
   },
   {
     view: 'PROJECTS',
     label: 'Mission Logs',
     code: '04-552',
     color: 'var(--orange)',
-    icon: Database
+    icon: FolderOpen
   },
   {
     view: 'VISUAL_LOGS',
     label: 'Simulations',
     code: '09-321',
     color: 'var(--light-blue)',
-    icon: Code
+    iconData: getIcon('codepen')
   },
   {
     view: 'SPECS',
     label: 'Subsystems',
     code: '11-882',
     color: 'var(--red)',
-    icon: BarChart2
+    icon: Cpu
   },
   {
     view: 'COMMUNICATION',
     label: 'Comms',
     code: '08-912',
     color: 'var(--purple)',
-    icon: Mail
+    icon: Radio
   }
 ]
 

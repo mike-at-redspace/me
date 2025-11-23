@@ -1,8 +1,9 @@
 @import 'tailwindcss';
 
 .transitionOverlay {
-  @apply absolute inset-0 bg-[var(--green)]/25 z-50 pointer-events-none flex flex-col justify-center items-center;
+  @apply absolute inset-x-0 top-0 bottom-12 bg-[var(--green)]/25 z-50 pointer-events-none flex flex-col justify-center items-center;
   @apply backdrop-blur-sm transition-opacity duration-300 rounded-tl-xl;
+  margin-bottom: -23px;
   &::after {
     content: '';
     position: absolute;

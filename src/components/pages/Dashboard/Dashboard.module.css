@@ -95,7 +95,7 @@
 }
 
 .introText {
-  @apply text-xl leading-relaxed text-[var(--tan)];
+  @apply text-xl leading-relaxed text-[var(--tan)] max-w-3xl;
 }
 
 .infoCards {

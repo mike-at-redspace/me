@@ -51,9 +51,9 @@ export const Dashboard = () => {
           </a>
         </div>
         <div ref={headerTextRef} className={styles.headerText}>
-          <h1 className={styles.title}>System Ready</h1>
+          <h1 className={styles.title}>All Systems Nominal</h1>
           <h2 className={styles.subtitle}>
-            Developer Profile: mike-at-redspace
+            Crew Member: mike-at-redspace | Rank: Senior Developer
           </h2>
         </div>
       </div>
@@ -61,26 +61,29 @@ export const Dashboard = () => {
       <div className={styles.content}>
         <div className={styles.intro}>
           <div className={styles.introCard}>
-            <div className={styles.scanComplete}>SCAN_COMPLETE</div>
+            <div className={styles.scanComplete}>BIO_SCAN_COMPLETE</div>
             <p className={styles.introText}>
-              Seasoned, frontend-focused Full Stack Developer with 10+ years of
-              experience building pixel-perfect, accessible, and SEO-optimized
-              web applications. Expert in functional JavaScript and modern CSS,
-              with strong backend architecture skills.
+              Starfleet-rated frontend specialist with over 10 stellar cycles of
+              active service, focused on precision UI systems, enforced
+              accessibility protocols, and SEO and LLM optimization protocols.
+              Fluent in JavaScript command structures and modern CSS frameworks,
+              with confirmed backend architecture capability. Adaptable under
+              legacy system conditions and committed to continuous system
+              enhancement.
             </p>
           </div>
 
           <div className={styles.infoCards}>
             <div className={styles.infoCard}>
-              <span className={styles.infoLabel}>Current Assignment</span>
+              <span className={styles.infoLabel}>Current Mission</span>
               <Logo width={72} className={styles.logo} />
             </div>
             <div className={styles.infoCard}>
-              <span className={styles.infoLabel}>Availability</span>
-              <span className={styles.infoValue}>OPEN</span>
+              <span className={styles.infoLabel}>Status</span>
+              <span className={styles.infoValue}>READY_TO_ENGAGE</span>
             </div>
             <div className={styles.infoCard}>
-              <span className={styles.infoLabel}>Location</span>
+              <span className={styles.infoLabel}>Sector</span>
               <span className={styles.infoValue}>ESEC-CAN-α</span>
             </div>
           </div>
@@ -98,7 +101,9 @@ export const Dashboard = () => {
         </div>
 
         <div className={styles.diagnostics}>
-          <div className={styles.diagnosticsLabel}>SYS_DIAGNOSTICS</div>
+          <div className={styles.diagnosticsLabel}>
+            SYSTEM_DIAGNOSTICS::ALL_READINGS_NORMAL
+          </div>
           <div className={styles.bars}>
             {barHeights.map((height, i) => (
               <div

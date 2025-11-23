@@ -11,7 +11,7 @@ export const ServiceRecord = () => {
     >
       <div className={styles.header}>
         <h2 className={styles.title}>Command Logs</h2>
-        <span className={styles.label}>MISSION_HISTORY</span>
+        <span className={styles.label}>ASSIGNMENT_LOG</span>
       </div>
 
       <div className={styles.content}>

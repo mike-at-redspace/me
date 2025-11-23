@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Icon } from '@/components/atoms'
 import styles from './Button.module.css'
 
 export const Button = ({
@@ -7,7 +8,8 @@ export const Button = ({
   color,
   onClick,
   active = false,
-  icon: Icon,
+  icon: IconComponent,
+  iconData,
   className = '',
   ...props
 }) => {
@@ -19,6 +21,13 @@ export const Button = ({
     onClick?.(e)
   }
 
+  // Support both direct icon component and iconData object (for simple-icons)
+  const iconProps = iconData
+    ? { icon: iconData.component, svgPath: iconData.svgPath, size: 18 }
+    : IconComponent
+      ? { icon: IconComponent, size: 18 }
+      : null
+
   return (
     <button
       onClick={handleClick}
@@ -29,9 +38,9 @@ export const Button = ({
       {...props}
     >
       <div className={styles.content}>
-        {Icon && (
+        {iconProps && (
           <div className={styles.icon}>
-            <Icon size={18} className={styles.iconSvg} />
+            <Icon {...iconProps} className={styles.iconSvg} />
           </div>
         )}
         <span className={styles.label}>{label}</span>
