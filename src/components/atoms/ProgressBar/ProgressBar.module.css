@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 .container {
-  @apply h-2 bg-[var(--light-red)]/20 w-full overflow-hidden;
+  @apply h-2 bg-(--light-red)/20 w-full overflow-hidden;
 }
 
 .bar {

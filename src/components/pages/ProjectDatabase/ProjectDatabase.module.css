@@ -7,15 +7,15 @@
 
 .header {
   @apply shrink-0 z-20 bg-black/90 backdrop-blur-md flex items-baseline justify-between mb-6;
-  @apply border-b border-[var(--orange)] pb-2 pt-4 mr-4;
+  @apply border-b border-(--orange) pb-2 pt-4 mr-4;
 }
 
 .title {
-  @apply text-4xl font-bold text-[var(--orange)] uppercase;
+  @apply text-4xl font-bold text-(--orange) uppercase;
 }
 
 .label {
-  @apply font-mono text-[var(--orange)];
+  @apply font-mono text-(--orange);
 }
 
 .content {

@@ -13,15 +13,15 @@
 }
 
 .icon {
-  @apply text-[var(--purple)] animate-pulse;
+  @apply text-(--purple) animate-pulse;
 }
 
 .title {
-  @apply text-4xl font-bold text-[var(--purple)] uppercase;
+  @apply text-4xl font-bold text-(--purple) uppercase;
 }
 
 .subtitle {
-  @apply text-[var(--pale-orange)] uppercase tracking-widest;
+  @apply text-(--pale-orange) uppercase tracking-widest;
 }
 
 .form {
@@ -37,19 +37,19 @@
 }
 
 .submitButton {
-  @apply bg-[var(--purple)] hover:bg-[var(--green)] text-black font-bold uppercase py-3 px-8;
+  @apply bg-(--purple) hover:bg-(--green) text-black font-bold uppercase py-3 px-8;
   @apply text-xl tracking-widest rounded-r-full transition-colors transform hover:scale-105;
-  @apply active:scale-95 duration-200 focus-visible:outline-2 focus-visible:outline-[var(--purple)] focus-visible:outline-offset-2;
+  @apply active:scale-95 duration-200 focus-visible:outline-2 focus-visible:outline-(--purple) focus-visible:outline-offset-2;
 }
 
 .note {
-  @apply mt-8 p-4 bg-[var(--light-blue)]/10 border-l-4 border-[var(--light-blue)];
+  @apply mt-8 p-4 bg-(--light-blue)/10 border-l-4 border-(--light-blue);
 }
 
 .noteLabel {
-  @apply text-[var(--light-blue)] font-bold;
+  @apply text-(--light-blue) font-bold;
 }
 
 .note p {
-  @apply text-[var(--pale-orange)] text-sm font-mono;
+  @apply text-(--pale-orange) text-sm font-mono;
 }

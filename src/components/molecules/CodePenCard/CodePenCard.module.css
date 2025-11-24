@@ -1,11 +1,11 @@
 @import 'tailwindcss';
 .card {
-  @apply cursor-pointer bg-zinc-900 border border-[var(--light-blue)] hover:border-[var(--green)] transition-all duration-300 hover:scale-[1.02];
-  @apply focus-visible:outline-2 focus-visible:outline-[var(--green)] focus-visible:outline-offset-2;
+  @apply cursor-pointer bg-zinc-900 border border-(--light-blue) hover:border-(--green) transition-all duration-300 hover:scale-[1.02];
+  @apply focus-visible:outline-2 focus-visible:outline-(--green) focus-visible:outline-offset-2;
 }
 
 .imageContainer {
-  @apply h-40 relative overflow-hidden flex items-center justify-center border-b border-[var(--blue)];
+  @apply h-40 relative overflow-hidden flex items-center justify-center border-b border-(--blue);
 }
 
 .image {
@@ -17,11 +17,11 @@
 }
 
 .imageOverlay {
-  @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60;
+  @apply absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-60;
 }
 
 .expandIcon {
-  @apply absolute bottom-2 right-2 text-[var(--green)] opacity-0 transition-opacity bg-black/50 p-1 rounded;
+  @apply absolute bottom-2 right-2 text-(--green) opacity-0 transition-opacity bg-black/50 p-1 rounded;
 }
 
 .card:hover .expandIcon {
@@ -29,7 +29,7 @@
 }
 
 .footer {
-  @apply p-3 bg-[var(--blue)] transition-colors;
+  @apply p-3 bg-(--blue) transition-colors;
 }
 
 .card:hover .footer {

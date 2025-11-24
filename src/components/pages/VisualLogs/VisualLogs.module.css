@@ -6,15 +6,15 @@
 
 .header {
   @apply shrink-0 z-20 bg-black/90 backdrop-blur-md flex items-baseline justify-between mb-6;
-  @apply border-b border-[var(--blue)] pb-2 pt-4 mr-4;
+  @apply border-b border-(--blue) pb-2 pt-4 mr-4;
 }
 
 .title {
-  @apply text-4xl font-bold text-[var(--blue)] uppercase;
+  @apply text-4xl font-bold text-(--blue) uppercase;
 }
 
 .label {
-  @apply font-mono text-[var(--blue)];
+  @apply font-mono text-(--blue);
 }
 
 .content {
@@ -37,7 +37,7 @@
 }
 
 .viewerHeader {
-  @apply flex justify-between items-center mb-4 bg-[var(--blue)] text-black p-2 rounded-t-lg;
+  @apply flex justify-between items-center mb-4 bg-(--blue) text-black p-2 rounded-t-lg;
   @apply sticky top-0 z-20 shrink-0;
 }
 
@@ -50,16 +50,19 @@
 }
 
 .viewerId {
-  @apply font-mono text-sm opacity-70;
+  @apply hidden md:block font-mono text-sm opacity-70;
 }
 
 .closeButton {
   @apply p-1 hover:bg-black/20 rounded flex items-center gap-2 font-bold uppercase text-sm;
   @apply focus-visible:outline-2 focus-visible:outline-black focus-visible:outline-offset-2;
+  span {
+    @apply hidden md:block;
+  }
 }
 
 .viewerContent {
-  @apply flex-1 flex flex-col border-4 border-[var(--blue)] bg-black overflow-hidden relative min-h-0;
+  @apply flex-1 flex flex-col border-4 border-(--blue) bg-black overflow-hidden relative min-h-0;
 }
 
 .iframe {

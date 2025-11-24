@@ -100,7 +100,7 @@ export const Communication = () => {
           <p>
             <span className={styles.noteLabel}>NOTE:</span> Clicking
             &quot;Transmit&quot; will remotely trigger a communication protocol
-            with your default email client.
+            with your default email client
           </p>
         </div>
       </div>
