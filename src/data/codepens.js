@@ -38,7 +38,10 @@ export const CODEPENS = [
     id: 'JjwrLyz',
     title: 'Lightning bolts'
   },
-
+  {
+    id: 'bNpaWKx',
+    title: '3d Effect using Stroke & text-shadow'
+  },
   {
     id: 'qEZEdyz',
     title: 'Bouncy Loading Tile'
