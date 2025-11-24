@@ -28,7 +28,10 @@ export const CODEPENS = [
     id: 'BaWPBGv',
     title: 'CSS Text Morph'
   },
-
+  {
+    id: 'bNpaWKx',
+    title: '3d Effect using Stroke & text-shadow'
+  },
   {
     id: 'BavYeGO',
     title: 'SlabText'
@@ -37,10 +40,6 @@ export const CODEPENS = [
   {
     id: 'JjwrLyz',
     title: 'Lightning bolts'
-  },
-  {
-    id: 'bNpaWKx',
-    title: '3d Effect using Stroke & text-shadow'
   },
   {
     id: 'qEZEdyz',
