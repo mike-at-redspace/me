@@ -1,42 +1,51 @@
-# mike-at-redspace in LCARS UI
 
-A React 19 + Astro single-page application inspired by the LCARS design language. Built with atomic design patterns, Tailwind CSS, and modern tooling.
+# mike-at-redspace — Dev Blog & Portfolio
+
+This is my personal dev blog and portfolio, focused on CodePen experiments and UI work inspired by Star Trek. Built in LCARS style, it reflects my love for the Star Trek franchise and for my current role with Paramount.
+
+---
+
+## 📝 What You'll Find Here
+
+- **CodePen Experiments** — Interactive demos and creative UI experiments, straight from my CodePen.
+- **Star Trek-Inspired UI** — LCARS-themed components and layouts, for fellow fans and the curious.
+- **Project Showcases** — Write-ups and demos of things I’ve built or contributed to (often with a sci-fi twist).
+- **Personal Notes** — Reflections, lessons learned, and stories from my journey (including my work at Paramount).
+
+---
 
 ## ✨ Features
 
-- **React 19** + **Astro** — Modern build system with SSR
-- **Tailwind CSS v4** — Utility-first styling with CSS Modules
-- **Atomic Design** — Organized component hierarchy (atoms → molecules → organisms)
-- **Context Providers** — Global state management
-- **Custom Hooks** — Reusable logic and effects
-- **Design Tokens** — Consistent theming system
-- **Path Aliases** — Clean imports (`@/components`, `@/hooks`, etc.)
+- **Personalized LCARS UI** — A Star Trek-inspired interface for a unique reading experience
+- **React 19 + Astro** — Modern, fast, and fun to hack on
+- **Blog & Portfolio** — Posts, project pages, and interactive demos
+- **Atomic Design** — Clean, scalable component structure
+- **Custom Hooks & Context** — For state, audio, navigation, and more
+- **Design Tokens** — Consistent theming and easy customization
 
 ## 📁 Project Structure
 
 ```
 me/
 ├── src/
-│   ├── components/          # React components (atomic structure)
-│   │   ├── atoms/           # Basic building blocks
-│   │   ├── molecules/       # Composite components
-│   │   ├── organisms/       # Complex UI sections
-│   │   └── pages/           # Page-level components
-│   ├── hooks/               # Custom React hooks
-│   ├── context/             # Global state providers
-│   ├── tokens/              # Design tokens: spacing, colors, typography
-│   ├── utils/               # Utility functions
-│   ├── data/                # Static data sources
-│   ├── styles/              # Global styles and resets
-│   ├── layouts/             # Astro layouts
-│   └── pages/               # Astro pages / routes
-├── public/                  # Static assets
-├── astro.config.mjs         # Astro configuration with path aliases
+│   ├── components/    # React UI (atomic design)
+│   ├── hooks/         # Custom React hooks
+│   ├── context/       # Global state providers
+│   ├── tokens/        # Design tokens (colors, spacing, typography)
+│   ├── utils/         # Utility functions
+│   ├── data/          # Blog posts, project data, etc.
+│   ├── styles/        # Global styles
+│   ├── layouts/       # Astro layouts
+│   └── pages/         # Astro routes (blog, projects, etc.)
+├── public/            # Static assets
+├── astro.config.mjs   # Astro config
 ├── package.json
 └── README.md
 ```
 
 ## 🚀 Getting Started
+
+Want to run this blog locally or hack on it?
 
 ### Prerequisites
 
@@ -76,11 +85,11 @@ npm run preview
 - **Lucide React** — Icon components
 - **Simple Icons** — Brand icons for project tags
 
-## 🏗️ Architecture
+## 🏗️ Architecture & Patterns
 
 ### Components
 
-Organized using atomic design principles:
+Built with atomic design principles:
 
 - **Atoms**: `Button`, `Block`, `Badge`, `ProgressBar`, `Input`, `Textarea`, `Icon`
 - **Molecules**: `Card`, `FormField`, `StatCard`, `SkillCard`, `ProjectCard`, `CodePenCard`
@@ -105,6 +114,16 @@ React Context providers:
 ### Design Tokens
 
 Located in `src/tokens/`: Colors, Spacing, Typography
+
+## 🤝 Follow & Contribute
+
+Want to follow updates or contribute?
+
+- **RSS/Atom**: Coming soon!
+- **Issues/PRs**: Suggestions, corrections, and contributions are welcome—open an issue or PR.
+- **Contact**: Find me on [GitHub](https://github.com/mike-at-redspace) or reach out via the site.
+
+---
 
 ## 📄 Credits
 
