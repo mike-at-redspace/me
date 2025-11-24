@@ -133,8 +133,35 @@ const App = () => {
           </div>
 
           <div className={styles.footer}>
+            <span>
+              [{' '}
+              <a
+                href='https://linkedin.com/in/mvardy'
+                target='_blank'
+                rel='noreferrer'
+                style={styles.footerLinks}
+              >
+                LINKEDIN
+              </a>
+              {' :: '}
+              <a
+                href='https://codepen.io/mike-at-redspace'
+                target='_blank'
+                rel='noreferrer'
+              >
+                CODEPEN
+              </a>
+              {' :: '}
+              <a
+                href='https://github.com/mike-at-redspace'
+                target='_blank'
+                rel='noreferrer'
+              >
+                GITHUB
+              </a>{' '}
+              ]
+            </span>
             <span>[ STACKTRACE :: LOGGED :: DEBUGGING ]</span>
-            <span>[ SESSION 0427 :: ACTIVE ]</span>
           </div>
         </div>
       </div>

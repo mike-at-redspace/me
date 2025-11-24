@@ -38,10 +38,10 @@ export const useKonamiCode = onActivate => {
       onActivate()
     }
 
-    // Auto-deactivate after 10 seconds
+    // Auto-deactivate after 5 seconds
     setTimeout(() => {
       setIsActive(false)
-    }, 10000)
+    }, 5000)
   }, [onActivate])
 
   useEffect(() => {
