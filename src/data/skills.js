@@ -104,7 +104,7 @@ export const SKILLS = [
       },
       {
         name: 'Python',
-        level: 75,
+        level: 65,
         icons: [
           'python',
           'django',
@@ -123,17 +123,17 @@ export const SKILLS = [
       },
       {
         name: 'GraphQL',
-        level: 80,
+        level: 75,
         icons: ['graphql', 'apollographql', 'prisma']
       },
       {
         name: 'Redis',
-        level: 80,
+        level: 75,
         icons: ['redis', 'upstash']
       },
       {
         name: 'Rust',
-        level: 40,
+        level: 25,
         icons: ['rust', 'tauri']
       }
     ]
@@ -153,7 +153,7 @@ export const SKILLS = [
       },
       {
         name: 'Analytics',
-        level: 95,
+        level: 80,
         icons: [
           'googleanalytics',
           'amplitude',
@@ -165,12 +165,12 @@ export const SKILLS = [
       },
       {
         name: 'CI/CD Pipelines',
-        level: 85,
+        level: 75,
         icons: ['githubactions', 'jenkins', 'gitlab', 'docker', 'bitbucket']
       },
       {
         name: 'Sales Eng',
-        level: 80,
+        level: 70,
         icons: [
           'salesforce',
           'hubspot',
@@ -182,7 +182,7 @@ export const SKILLS = [
       },
       {
         name: 'Accessibility',
-        level: 95,
+        level: 75,
         icons: ['lighthouse', 'mdnwebdocs']
       }
     ]
