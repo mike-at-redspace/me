@@ -78,6 +78,10 @@ export const CODEPENS = [
     title: 'Ambient Glow Showcase'
   },
   {
+    id: 'azNEaya',
+    title: 'Sprite in a Maze'
+  },
+  {
     id: 'JoPJKWB',
     title: 'Termo'
   }
