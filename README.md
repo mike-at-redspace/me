@@ -1,4 +1,3 @@
-
 # mike-at-redspace — Dev Blog & Portfolio
 
 This is my personal dev blog and portfolio, focused on CodePen experiments and UI work inspired by Star Trek. Built in LCARS style, it reflects my love for the Star Trek franchise and for my current role with Paramount.

@@ -23,6 +23,7 @@ export const TechSpecs = () => {
                     name={skill.name}
                     level={skill.level}
                     category={category.category}
+                    icons={skill.icons || []}
                   />
                 ))}
               </div>

@@ -2,34 +2,189 @@ export const SKILLS = [
   {
     category: 'Engineering Core',
     items: [
-      { name: 'HTML/CSS', level: 98 },
-      { name: 'JavaScript', level: 95 },
-      { name: 'React/Next.js', level: 95 },
-      { name: 'Node.js', level: 90 },
-      { name: 'PHP', level: 90 },
-      { name: 'WordPress', level: 95 }
+      {
+        name: 'HTML/CSS',
+        level: 98,
+        icons: [
+          'html5',
+          'css',
+          'sass',
+          'less',
+          'tailwindcss',
+          'bootstrap',
+          'mui',
+          'postcss',
+          'bulma'
+        ]
+      },
+      {
+        name: 'JavaScript',
+        level: 95,
+        icons: [
+          'javascript',
+          'jquery',
+          'typescript',
+          'json',
+          'babel',
+          'webpack',
+          'vite',
+          'eslint',
+          'prettier'
+        ]
+      },
+      {
+        name: 'React/Next.js',
+        level: 95,
+        icons: [
+          'react',
+          'nextdotjs',
+          'reactrouter',
+          'redux',
+          'recoil',
+          'gatsby',
+          'vercel',
+          'storybook'
+        ]
+      },
+      {
+        name: 'Node.js',
+        level: 90,
+        icons: [
+          'nodedotjs',
+          'express',
+          'nodemon',
+          'fastify',
+          'nestjs',
+          'npm',
+          'pnpm',
+          'yarn'
+        ]
+      },
+      {
+        name: 'PHP',
+        level: 90,
+        icons: [
+          'php',
+          'laravel',
+          'symfony',
+          'composer',
+          'codeigniter',
+          'cakephp',
+          'apache'
+        ]
+      },
+      {
+        name: 'WordPress',
+        level: 95,
+        icons: [
+          'wordpress',
+          'woocommerce',
+          'elementor',
+          'wpengine',
+          'automattic'
+        ]
+      }
     ]
   },
   {
     category: 'Backend & Data',
     items: [
-      { name: 'SQL/NoSQL', level: 85 },
-      { name: 'Python', level: 75 },
-      { name: 'Ruby', level: 70 },
-      { name: 'GraphQL', level: 80 },
-      { name: 'Redis', level: 80 },
-      { name: 'Rust', level: 40 }
+      {
+        name: 'SQL/NoSQL',
+        level: 85,
+        icons: [
+          'mysql',
+          'postgresql',
+          'mongodb',
+          'sqlite',
+          'mariadb',
+          'firebase',
+          'supabase'
+        ]
+      },
+      {
+        name: 'Python',
+        level: 75,
+        icons: [
+          'python',
+          'django',
+          'flask',
+          'fastapi',
+          'numpy',
+          'scipy',
+          'pytorch',
+          'tensorflow'
+        ]
+      },
+      {
+        name: 'Ruby',
+        level: 70,
+        icons: ['ruby', 'rubyonrails', 'rubygems']
+      },
+      {
+        name: 'GraphQL',
+        level: 80,
+        icons: ['graphql', 'apollographql', 'prisma']
+      },
+      {
+        name: 'Redis',
+        level: 80,
+        icons: ['redis', 'upstash']
+      },
+      {
+        name: 'Rust',
+        level: 40,
+        icons: ['rust', 'tauri']
+      }
     ]
   },
   {
     category: 'Command & Ops',
     items: [
-      { name: 'Project Planning', level: 90 },
-      { name: 'Resource Alloc', level: 90 },
-      { name: 'Analytics', level: 95 },
-      { name: 'CI/CD Pipelines', level: 85 },
-      { name: 'Sales Eng', level: 80 },
-      { name: 'Accessibility', level: 95 }
+      {
+        name: 'Project Planning',
+        level: 90,
+        icons: ['jira', 'trello', 'asana', 'linear', 'basecamp', 'notion']
+      },
+      {
+        name: 'Resource Alloc',
+        level: 90,
+        icons: ['notion', 'confluence', 'airtable', 'miro', 'lucid']
+      },
+      {
+        name: 'Analytics',
+        level: 95,
+        icons: [
+          'googleanalytics',
+          'amplitude',
+          'hotjar',
+          'grafana',
+          'datadog',
+          'sentry'
+        ]
+      },
+      {
+        name: 'CI/CD Pipelines',
+        level: 85,
+        icons: ['githubactions', 'jenkins', 'gitlab', 'docker', 'bitbucket']
+      },
+      {
+        name: 'Sales Eng',
+        level: 80,
+        icons: [
+          'salesforce',
+          'hubspot',
+          'pipedrive',
+          'zoho',
+          'zendesk',
+          'mailchimp'
+        ]
+      },
+      {
+        name: 'Accessibility',
+        level: 95,
+        icons: ['lighthouse', 'mdnwebdocs']
+      }
     ]
   }
 ]
