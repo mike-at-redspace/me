@@ -58,7 +58,7 @@ export const EXPERIENCE = [
     sector: 'Starfleet Academy Admissions',
     dates: 'STARDATE 2018',
     desc: 'Prototyped modular LCARS assessment systems for officer candidate evaluation.',
-    color: 'var(--light-blue)',
+    color: '#99CCFF',
     highlights: [
       'Forged modular React-based UI panels for cadet screening applications.',
       'Created holographic developer assessment challenges to streamline the recruitment of new officers.'
@@ -70,7 +70,7 @@ export const EXPERIENCE = [
     sector: 'Jupiter Station Medical Informatics',
     dates: '2016 - 2018',
     desc: 'Designed neural-support data lattices for behavioral health and recovery divisions.',
-    color: 'var(--blue)',
+    color: '#3366CC',
     highlights: [
       'Assembled patient-flow orchestration engines for long-term care missions.',
       'Generated ministry-grade statistical dossiers to secure Federation funding.',
