@@ -33,10 +33,13 @@ export const CODEPENS = [
     title: '3d Effect using Stroke & text-shadow'
   },
   {
+    id: 'azNqbvm',
+    title: 'Text Scramble'
+  },
+  {
     id: 'BavYeGO',
     title: 'SlabText'
   },
-
   {
     id: 'JjwrLyz',
     title: 'Lightning bolts'
